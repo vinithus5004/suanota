@@ -1,5 +1,6 @@
 const mainContent = document.querySelector('.main-content');
 const span = document.querySelector('.button.cart > span');
+
 let productsOnCart = [];
 
 function toBRL(amout){
@@ -55,3 +56,18 @@ function onCartToggle(id){
 
 renderProducts();
 const productButtons = document.querySelectorAll('.main-content .button');
+
+/* ---------- modal ---------- */
+const modalContainer = document.querySelector('.modal-container');
+const openModal = document.querySelector('.button.cart');
+const closeModal = document.querySelector('.modal-header .close-modal');
+const productsCount = document.querySelector('.modal-header span');
+
+openModal.addEventListener('click', () => {
+    productsCount.innerText = `${productsOnCart.length} ${productsOnCart.length === 1 ? 'item adicionado' : 'itens adicionados'} ao carrinho`;
+    modalContainer.classList.add('active');
+});
+
+closeModal.addEventListener('click', () => {
+    modalContainer.classList.remove('active');
+})
