@@ -4,42 +4,48 @@ const products = [
         name: 'Violão',
         price: 380.60,
         image: 'img_1.jpg',
-        onCart: false
+        onCart: false,
+        qtOnCart: 0
     },
     {
         id: 2,
         name: 'Guitarra',
         price: 650,
         image: 'img_2.jpg',
-        onCart: false
+        onCart: false,
+        qtOnCart: 0
     },
     {
         id: 3,
         name: 'Contra-Baixo',
         price: 1280,
         image: 'img_3.jpg',
-        onCart: false
+        onCart: false,
+        qtOnCart: 0
     },
     {
         id: 4,
         name: 'Contra-Baixo',
         price: 1730,
         image: 'img_4.jpg',
-        onCart: false
+        onCart: false,
+        qtOnCart: 0
     },
     {
         id: 5,
         name: 'Piano',
         price: 7032,
         image: 'img_5.jpg',
-        onCart: false
+        onCart: false,
+        qtOnCart: 0
     },
     {
         id: 6,
         name: 'Violino',
         price: 450,
         image: 'img_6.jpg',
-        onCart: false
+        onCart: false,
+        qtOnCart: 0
     },
     {
         id: 7,
@@ -52,13 +58,15 @@ const products = [
         name: 'Banjo',
         price: 630,
         image: 'img_8.jpg',
-        onCart: false
+        onCart: false,
+        qtOnCart: 0
     },
     {
         id: 9,
         name: 'Teclado',
         price: 600,
         image: 'img_9.jpg',
-        onCart: false
+        onCart: false,
+        qtOnCart: 0
     }
 ]

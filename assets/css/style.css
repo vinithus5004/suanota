@@ -112,8 +112,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
 }
 .modal-container.active{
     opacity: 1;
@@ -153,4 +153,10 @@ body{
 }
 .modal .button{
     height: fit-content;
+}
+.modal .product-count{
+    user-select: none;
+}
+.modal .product-count i{
+    cursor: pointer;
 }
