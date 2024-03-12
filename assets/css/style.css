@@ -4,6 +4,7 @@
     --bg-color: #deb887;
     --bg-button: #664433;
     --bg-button-hover: #996633;
+    --color-footer: #6B4423;
 }
 
 *{
@@ -191,6 +192,40 @@ body{
     margin-left: 8px;
 }
 
+/* ---------- Footer ---------- */
+.footer{
+    border-top: 1px dotted var(--color-footer);
+}
+.footer .contact-us{
+    display: flex;
+    justify-content: space-around;
+    padding: 32px 0;
+    color: var(--color-footer);
+}
+.footer .contact-us .social > ul,
+.footer .contact-us .direct > ul{
+    list-style: none;
+    margin-top: 8px;
+}
+.footer .contact-us .social i,
+.footer .contact-us .direct i{
+    margin-right: 5px;
+}
+.footer .contact-us .social > ul > li > a{
+    color: var(--color-footer);
+    text-decoration: none;
+}
+.footer .contact-us .social > ul > li > a:hover{
+    text-decoration: underline;
+}
+.footer .copyright{
+    text-align: center;
+    padding: 8px;
+    color: #6F4E37;
+    font-size: 14px;
+    font-weight: 700;
+}
+
 /* ---------- Responsivity ---------- */
 
 @media (max-width: 1280px){
@@ -213,6 +248,14 @@ body{
 @media (max-width: 520px){
     .main-content{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .footer .contact-us{
+        flex-direction: column;
+        gap: 16px;
+        padding-left: 16px;
+    }
+    .button.cart{
+        top: 85%;     
     }
 }
 @media (max-width: 375px){
