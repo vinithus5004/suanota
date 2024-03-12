@@ -71,9 +71,6 @@ body{
     gap: 2rem;
 }
 
-.product-item{
-
-}
 .product-item .product-img{
     width: 100%;
     height: 200px;
@@ -127,11 +124,11 @@ body{
     border-radius: 8px;
 }
 .modal-header{
+    padding: 8px;
+    border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
-    border-bottom: 1px solid #000;
 }
 .modal-header .close-modal{
     background-color: #f00;
@@ -139,24 +136,90 @@ body{
     border-radius: 4px;
     cursor: pointer;
 }
+.modal .products{
+    max-height: 500px;
+    overflow-y: auto;
+}
 .modal .product-item{
+    border-bottom: 1px solid #eee;
+    padding: 8px;
     display: flex;
+    gap: 20px;
 }
 .modal .product-img {
     width: 100px;
     height: 100px;
 }
-.modal .item-info-container{
-    flex: 1;
-    display: flex;
+.modal .product-count{
+    margin: 8px 0;
+}
+.modal .buttons-controls i{
+    cursor: pointer;
+    background-color: #3B00DB;
+    color: #fff;
+    padding: 3px;
+    border-radius: 3px;
+    user-select: none;
+}
+.modal .finalize-purchase{
+    display: none;
     justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+.modal .finalize-purchase.visible{
+    display: flex;
 }
 .modal .button{
     height: fit-content;
 }
-.modal .product-count{
-    user-select: none;
+
+.empty-cart{
+    display: none;
+    text-align: center;
+    padding: 16px;
 }
-.modal .product-count i{
+.empty-cart.visible{
+    display: block;
+}
+
+.remove-from-cart{
+    font-size: 14px;
+    color: #468FEA;
     cursor: pointer;
+    user-select: none;
+    margin-left: 8px;
+}
+
+/* ---------- Responsivity ---------- */
+
+@media (max-width: 1280px){
+    .main-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px){
+    .modal .products{
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px){
+    .main-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 520px){
+    .main-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 375px){
+    .modal .finalize-purchase.visible{
+        display: block;
+    }
+    .modal .button{
+        margin-top: 8px;
+    }
 }
